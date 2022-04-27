@@ -2,10 +2,10 @@ from flask import Flask
 
 application = Flask(__name__)
 
-@application.route('/')
+@application.route('/', methods=['GET','POST'])
 def hello_world():
-    return 'Hello World'
+    return 'Hello World 5678'
 
 
 if __name__ == '__main__':
-    application.run(debug=True,host='0.0.0.0',port=8080)
+    application.run()
